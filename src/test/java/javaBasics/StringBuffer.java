@@ -73,4 +73,8 @@ void main()
     sb1.delete(5,10);
 
     System.out.println(sb1);
+
+    //Converts the stringbuffer to a string value
+    String ss3=sb1.toString();
+    System.out.println(ss3);
 }

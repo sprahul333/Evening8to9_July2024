@@ -73,7 +73,6 @@ double performArithmeticOperations(int a, int b, char op) {
             yield Math.pow(a, b);
         }
 
-
         default -> {
             yield -1;
         }
