@@ -59,6 +59,7 @@ class Names
     //    //Constructor body
     //}
 
+    //Within the same class, we can have multiple parameterized constructors
     public Names(String fName, String mName, String lName)
     {
         System.out.println("Parameterized Constructor Called");
@@ -66,6 +67,23 @@ class Names
         firstName=fName;
         middleName=mName;
         lastName=lName;
+    }
+
+    public Names(String firstName, String middleName)
+    {
+        System.out.println("Parameterized Constructor Called");
+
+        //Here we are maintaining parameter and variables names as same
+        //this is the keyword used to refer to the current object, method or variable
+        //this keyword is used to refer to the current object
+        //this keyword is used to refer to the current method
+        //this keyword is used to refer to the current variable
+
+        //this keyword is used in the same class
+        //Updated values of first name and last name
+        this.firstName=firstName;
+        this.middleName=middleName;
+        lastName="";
     }
 
     //If the keyword static is not there, then it is a non static method
@@ -122,5 +140,11 @@ public class ConstructorConcepts {
         Names.displayNames();
 
         Names n2=new Names("Sai","Gnanadeep","Kumar");
+
+        //Abstraction ----> Revealing only the required information and hiding the rest of the information
+        n2.displayName();
+
+        Names n3=new Names("Automation","Selenium");
+        n3.displayName();
     }
 }
